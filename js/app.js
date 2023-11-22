@@ -3,9 +3,14 @@ const dateInput = document.getElementById("date-input");
 const addButton = document.getElementById("add-btn");
 const alertMessage = document.getElementById("alert-message")
 
-//create array of tasks
-const todos = [];
+//create array of tasks => get todos from localStorage
+const todos = JSON.parse(localStorage.getItem("todos")) || [];
+console.log(todos);
 
+const saveToLs = ()=>{
+    localStorage.setItem("todos",JSON.stringify(todos))
+}
+//generate random id for todos
 const generateId = () => {
     return Math.round(Math.random() * Math.random() * Math.pow(10, 15)).toString();
 
@@ -39,6 +44,7 @@ const addTask = () => {
     //show success or error alert in html
     if (task) {
         todos.push(todo);
+        saveToLs()
         taskInput.value = ""
         dateInput.value = ""
         console.log(todos);
