@@ -1,5 +1,3 @@
-
-
 const taskInput = document.getElementById("task-input");
 const dateInput = document.getElementById("date-input");
 const addButton = document.getElementById("add-btn");
