@@ -1,9 +1,9 @@
 :root {
     --color-primary: #5b0eeb;
-    --color-background: #e6e6e6;
+    --color-background: #420f99;
     --color-task: #f7f7f7;
     --color-success: rgb(29, 155, 46);
-    --color-warning: #eeb31e;
+    --color-warning: #ee711e;
     --color-error: #f74848;
 
 }
@@ -23,14 +23,14 @@ body {
 }
 
 header {
-   
+
     font-weight: bolder;
     font-size: larger;
     text-align: center;
     background-color: #36068a;
     color: whitesmoke;
     padding: 10px;
-    
+    border-radius: 0 0 10px 10px;
 }
 
 .container {
@@ -74,6 +74,7 @@ button {
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 5px;
+    /* text-decoration: line-through; */
 }
 
 button:hover {
@@ -96,6 +97,7 @@ table {
 
 thead {
     background-color: var(--color-background);
+    color: #e6e6e6;
 }
 
 thead th {
@@ -154,4 +156,9 @@ tbody td button:nth-child(3) {
 
 .alert-error {
     background-color: var(--color-error);
+}
+
+#edit-btn {
+    display: none;
+    background-color: var(--color-warning);
 }
